@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/nomeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035" />
+
+
+    <EditText
+        android:id="@+id/nomeE"
+        android:layout_width="405dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nomeTxt" />
+
+    <TextView
+        android:id="@+id/telefoneTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/telefone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nomeE"
+        app:layout_constraintVertical_bias="0.103"
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/telefoneE"
+        android:layout_width="405dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintTop_toTopOf="@id/telefoneTxt"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+    <TextView
+        android:id="@+id/emailTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/telefoneE"
+        app:layout_constraintVertical_bias="0.103"
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/emailE"
+        android:layout_width="405dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/emailTxt" />
+
+
+    <CheckBox
+        android:id="@+id/ingressarCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/ingressar"
+        app:layout_constraintTop_toTopOf="@id/emailE"
+        tools:layout_editor_absoluteX="3dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/sexoTxt"
+        android:layout_width="68dp"
+        android:layout_height="36dp"
+        android:text="@string/sexo"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ingressarCB"
+        app:layout_constraintVertical_bias="0.159"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="3dp" />
+
+    <RadioGroup
+        android:id="@+id/sexoRG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/sexoTxt"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="10dp">
+        <RadioButton
+            android:id="@+id/masculinoRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/masculino"
+            tools:layout_editor_absoluteX="260dp"
+            tools:layout_editor_absoluteY="577dp" />
+
+        <RadioButton
+            android:id="@+id/femininoRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/feminino"/>
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/cidadeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cidade"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sexoRG"
+        android:layout_marginTop="71dp"
+        app:layout_constraintVertical_bias="0.103"
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/cidadeE"
+        android:layout_width="405dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cidadeTxt" />
+    <TextView
+        android:id="@+id/estadoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cidadeTxt"
+        app:layout_constraintVertical_bias="0.103"
+        android:layout_marginTop="30dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <Spinner
+        android:id="@+id/estadoSp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/estados"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="@id/estadoTxt"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/limparBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/salvarBt"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!--    <EditText-->
+<!--        android:id="@+id/editTextTextEmailAddress"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        tools:layout_editor_absoluteX="79dp"-->
+<!--        tools:layout_editor_absoluteY="308dp" />-->
+
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextNumberSigned"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="numberSigned"-->
+<!--        tools:layout_editor_absoluteX="137dp"-->
+<!--        tools:layout_editor_absoluteY="398dp" />-->
+
+    <Button
+        android:id="@+id/salvarBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="76dp"
+        android:text="Salvar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-54dp"
+        tools:layout_editor_absoluteY="104dp">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="550dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
